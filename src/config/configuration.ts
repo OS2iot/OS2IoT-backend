@@ -6,6 +6,7 @@ export default (): any => {
             port: parseInt(process.env.DATABASE_PORT, 10) || 5433,
             username: process.env.DATABASE_USERNAME || "os2iot",
             password: process.env.DATABASE_PASSWORD || "toi2so",
+            ssl: process.env.DATABASE_ENABLE_SSL === "true"
         },
         jwt: {
             secret: process.env.JWT_SECRET || "secretKey-os2iot-secretKey",
